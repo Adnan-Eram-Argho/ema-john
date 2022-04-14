@@ -20,7 +20,7 @@ const Signup = () => {
         setConfirmPassword(e.target.value)
     }
     if (user) {
-        nevigate('/home')
+        nevigate('/')
     }
     const handleCreateUser = e => {
         e.preventDefault()
