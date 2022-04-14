@@ -20,14 +20,18 @@ const Login = () => {
         setPassword(e.target.value)
         console.log(password)
     }
-    if (user) {
-        navigate(from, { replace: true })
+    // if (user) {
+    //     navigate(from, { replace: true })
 
-    }
+    // }
     const handleUserSignIn = (e) => {
         e.preventDefault();
-        signInWithEmailAndPassword(email, password)
+        signInWithEmailAndPassword(email, password).then(() => navigate(from, { replace: true }))
     }
+    // const handleUserSignIn = (e) => {
+    //     e.preventDefault();
+    //     signInWithEmailAndPassword(email, password)
+    // }
     return (
         <div className='form-container'>
 
