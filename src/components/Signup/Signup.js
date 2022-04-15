@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
 const Signup = () => {
     const [email, setEmail] = useState('');
+
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
@@ -13,6 +14,7 @@ const Signup = () => {
     const handleEmailBlur = (e) => {
         setEmail(e.target.value)
     }
+
     const handlePasswordBlur = (e) => {
         setPassword(e.target.value)
     }
@@ -41,6 +43,7 @@ const Signup = () => {
             <div >
                 <h2 className='form-title'>Login</h2>
                 <form onSubmit={handleCreateUser}>
+
                     <div className="input-group">
                         <label htmlFor="email">
                             Email
